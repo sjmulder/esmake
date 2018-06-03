@@ -1,0 +1,44 @@
+{
+  "name": "esmake",
+  "version": "0.1.0",
+  "description": "POSIX compliant make implementation in pure JS",
+  "main": "esmake.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "nyc --reporter=text --reporter=html mocha",
+    "lint": "eslint lib/ test/",
+    "fmt": "prettier --write lib/**/*.js test/**/*.js",
+    "make": "nmake"
+  },
+  "keywords": [
+    "make",
+    "posix",
+    "build"
+  ],
+  "author": "Sijmen J. Mulder",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.1",
+    "prettier": "^1.13.4"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "extends": "prettier"
+  },
+  "prettier": {
+    "printWidth": 78,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "bracketSpacing": false
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^2.9.0"
+  }
+}
